@@ -22,32 +22,31 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
+        <!-- 添加必须的组件 -->
         <activity
-            android:name="net.youmi.android.AdBrowser"
+            android:name="a.b.c.AdBrowser"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:theme="@android:style/Theme.Light.NoTitleBar" >
         </activity>
 
         <service
-            android:name="net.youmi.android.AdService"
+            android:name="a.b.c.AdService"
             android:exported="false" >
         </service>
         <service
-            android:name="net.youmi.android.ExpService"
+            android:name="a.b.c.ExpService"
             android:exported="false" >
         </service>
 
-        <receiver android:name="net.youmi.android.AdReceiver" >
+        <receiver android:name="a.b.c.AdReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_ADDED" />
 
                 <data android:scheme="package" />
             </intent-filter>
         </receiver>
-        <receiver
-            android:name="net.youmi.android.offers.OffersReceiver"
-            android:exported="false" >
-        </receiver>
+        
     </application>
 
 </manifest>
